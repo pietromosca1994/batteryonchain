@@ -1,0 +1,150 @@
+body
+{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+h1
+{
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+#containerBatteryNFT
+{
+    display: block;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+#box 
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#box:hover
+{
+    box-shadow: 1px 6px 3px 0 rgb(185, 185, 185);
+}
+#containerBatteryNFT img
+{
+    float: left;
+    border-radius: 10px;
+    margin-right: 20px;
+    width: 80px;
+    height: 80px;
+}
+#details
+{
+    padding: 0 15px;
+    text-transform: capitalize;
+}
+#box a 
+{
+    margin: 0;
+    width: 100%;
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(45, 42, 45);
+}
+#box a:link, a:visited
+{
+    text-decoration: none
+}
+/* #box h2
+{
+    margin: 0;
+    width: 100%;
+    color: rgb(36, 38, 38);
+} */
+#box h3
+{
+    margin: 0;
+    width: 100%;
+    font-size: 16px;
+    color: rgb(45, 42, 45);
+}
+/* #box h4
+{
+    margin: 0;
+    width: 100%;
+    font-weight: 100;
+    color: rgb(3, 94, 94);
+} */
+
+
+/* ----------------------------- MEDIA QUERY --------------------------- */
+
+@media(max-width: 1070px)
+{
+    h1
+    {
+        font-size: 25px;
+    }
+    #containerBatteryNFT
+    {
+        width: 95%;
+        grid-gap: 10px;
+    }
+}
+@media(max-width: 850px)
+{
+    h1 
+    {
+        width: 80%;
+    }
+    #containerBatteryNFT
+    {
+        display: grid;
+        grid-gap: 70px 20px;
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+    }    
+}
+@media(max-width: 650px)
+{
+    h1
+    {
+        font-size: 20px;
+    }
+    h1 
+    {
+        width: 90%;
+    }
+    #containerBatteryNFT
+    {
+        width: 90%;
+    }
+}
+@media(max-width: 600px)
+{
+    h1 
+    {
+        width: 70%;
+    }
+    #containerBatteryNFT
+    {
+        width: 70%;
+    }
+}
+@media(max-width: 505px)
+{
+    h1 
+    {
+        width: 80%;
+    }
+    #containerBatteryNFT
+    {
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
