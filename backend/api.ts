@@ -7,7 +7,7 @@ import {getBatteryNFTInfo, BatteryNFT, getAllMintsForCollection} from './blockch
 
 // umi initialization
 const cluster = "devnet"
-const wallet = require('../solana_client/wallet.json');
+const wallet = require('wallet.json');
 const umi = createUmi(`https://api.${cluster}.solana.com`, "finalized")
 let keypair = umi.eddsa.createKeypairFromSecretKey(new Uint8Array(wallet));
 const myKeypairSigner = createSignerFromKeypair(umi, keypair);

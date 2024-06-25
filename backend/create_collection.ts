@@ -8,7 +8,7 @@ import { dasApi } from '@metaplex-foundation/digital-asset-standard-api';
 
 (async () => {
 
-    const wallet = require('../solana_client/wallet.json');
+    const wallet = require('wallet.json');
 
     const cluster = "devnet"
     const umi = createUmi(`https://api.${cluster}.solana.com`, "finalized")

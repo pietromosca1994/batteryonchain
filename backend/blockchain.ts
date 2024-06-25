@@ -7,7 +7,7 @@ import {createAndMint, TokenStandard, mintV1, createNft, createFungibleAsset, mp
 import { dasApi } from '@metaplex-foundation/digital-asset-standard-api';
 import { readFile } from "fs/promises";
 
-const wallet = require('../solana_client/wallet.json');
+const wallet = require('wallet.json');
 
 const cluster = "devnet"
 const umi = createUmi(`https://api.${cluster}.solana.com`, "finalized").use(mplCore())

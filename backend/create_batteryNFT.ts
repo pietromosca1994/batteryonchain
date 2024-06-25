@@ -4,7 +4,7 @@ import { BatteryInfo, createBatteryNFT, updateBatteryNFT, BatteryProperties} fro
 
 (async () => {
 
-    const wallet = require('../solana_client/wallet.json');
+    const wallet = require('wallet.json');
 
     const cluster = "devnet"
     const umi = createUmi(`https://api.${cluster}.solana.com`, "finalized")
