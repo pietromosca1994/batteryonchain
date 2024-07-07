@@ -22,25 +22,13 @@
     <!-- HEADER -->
     <div id="1"></div>
     <script>
-        load("./header.html");
+        load("header.html");
         function load(url)
         {
             req = new XMLHttpRequest();
             req.open("GET", url, false);
             req.send(null);
             document.getElementById(1).innerHTML = req.responseText;
-        }
-    </script>
-    <!-- SLIDER -->
-    <div id="2"></div>
-    <script>
-        load("slider.html");
-        function load(url)
-        {
-            req = new XMLHttpRequest();
-            req.open("GET", url, false);
-            req.send(null);
-            document.getElementById(2).innerHTML = req.responseText;
         }
     </script>
 
@@ -71,23 +59,6 @@
     </script>
 
 </body>
-
-<!-- slider JS START -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-<script>
-    $(document).ready(function()
-    {
-    $('#containerSlider').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        });
-    });
-</script>
-<!-- slider JS ENDS -->
 
 <!-- content JS -->
 <script src="content.js"></script>

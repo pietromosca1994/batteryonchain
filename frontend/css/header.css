@@ -58,7 +58,16 @@ body
     text-decoration: none;
     color: rgb(29, 29, 29);
 }
-
+#connect-button
+{
+    padding: 10px 15px;
+    color: white;
+    background-color: rgb(3, 122, 122);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
 .search
 {
     padding: 14px;
@@ -87,12 +96,12 @@ body
 }
 #input 
 {
-    width: 35em;
+    width: 100em;
     height: 3em;
     padding: 2px 50px;
     background-color: rgb(241, 241, 241);
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 #input::placeholder
 {

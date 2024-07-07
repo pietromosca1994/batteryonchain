@@ -7,15 +7,7 @@ import {createAndMint, TokenStandard, mintV1, createNft, createFungibleAsset, mp
 import { dasApi } from '@metaplex-foundation/digital-asset-standard-api';
 import { readFile } from "fs/promises";
 
-const wallet = require('wallet.json');
-
-const cluster = "devnet"
-const umi = createUmi(`https://api.${cluster}.solana.com`, "finalized").use(mplCore())
-let keypair = umi.eddsa.createKeypairFromSecretKey(new Uint8Array(wallet));
-const myKeypairSigner = createSignerFromKeypair(umi, keypair);
-umi.use(signerIdentity(myKeypairSigner));
-umi.use(mplTokenMetadata())
-umi.use(irysUploader());
+const cluster='devnet'
 
 export interface CollectionInfo {
   collection_id: string
@@ -265,7 +257,7 @@ export async function createBatteryNFT(umi: Umi, batteryInfo: BatteryInfo, colle
   return mint.publicKey
 }
 
-export async function fetchBatteryNFT(assetAddress: string | PublicKey): Promise<AssetV1>{
+export async function fetchBatteryNFT(umi: Umi, assetAddress: string | PublicKey): Promise<AssetV1>{
   // fetch asset
   // might be changed for getAsset from https://github.com/metaplex-foundation/digital-asset-standard-api
   const asset = await fetchAsset(umi, assetAddress, {
@@ -445,6 +437,23 @@ export async function getAllMintsForCollection(umi: Umi, collection: string): Pr
   const assets = await umi.rpc.getAssetsByGroup({
     groupKey: 'collection',
     groupValue: collection,
+  });
+
+  let assetsList: string[] = []
+  for (const asset of assets.items ?? []) { 
+    assetsList.push(asset.id)
+  }
+
+  return assetsList
+}
+
+// https://github.com/metaplex-foundation/digital-asset-standard-api
+export async function getCollectionsForUpdateAuthority(umi: Umi, updateAuthority: string): Promise<string[]> {
+  // initialize umi
+  umi.use(dasApi())
+  
+  const assets = await umi.rpc.searchAssets({
+    creator: updateAuthority as PublicKey,
   });
 
   let assetsList: string[] = []

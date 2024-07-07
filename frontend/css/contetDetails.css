@@ -2,8 +2,21 @@ body
 {
     margin: 0;
     text-transform: capitalize;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', roboto;
     font-weight: 100;
+}
+
+a 
+{
+    margin: 0;
+    width: 100%;
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(45, 42, 45);
+}
+a:link, a:visited
+{
+    text-decoration: none
 }
 
 #containerBatteryNFT
@@ -31,11 +44,10 @@ body
     box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
     margin-right: 20px;
 }
-#imageSection img:hover
+/* #imageSection img:hover
 {
     box-shadow: 1px 0px 9px 1px rgb(3, 122, 122);
-
-}
+} */
 
 #batteryNFTAttributes
 {
@@ -65,6 +77,25 @@ pre
 {
     width: 100%;
     margin-top: 100px;
+}
+h1
+{
+    font-size: 35px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+h4
+{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(3, 122, 122);
+}
+pre
+{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(3, 122, 122);
+    white-space: pre-wrap;
 }
 
 #productPreview

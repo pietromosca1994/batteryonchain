@@ -3,11 +3,11 @@ import cors from 'cors';
 
 import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
 import { createSignerFromKeypair, signerIdentity} from '@metaplex-foundation/umi'
-import {getBatteryNFTInfo, BatteryNFT, getAllMintsForCollection} from './blockchain';
+import {getBatteryNFTInfo, BatteryNFT, getAllMintsForCollection, getCollectionsForUpdateAuthority} from './blockchain';
 
 // umi initialization
 const cluster = "devnet"
-const wallet = require('wallet.json');
+const wallet = require('./wallet.json');
 const umi = createUmi(`https://api.${cluster}.solana.com`, "finalized")
 let keypair = umi.eddsa.createKeypairFromSecretKey(new Uint8Array(wallet));
 const myKeypairSigner = createSignerFromKeypair(umi, keypair);
@@ -40,7 +40,8 @@ app.get('/api/batteryNFT/:batteryNFTAddress', async (req, res) => {
 
 app.get('/api/batteryNFTCollection/:batteryNFTCollectionAddress', async (req, res) => {
     const batteryNFTCollectionAddress = req.params.batteryNFTCollectionAddress;
-    
+    console.log(`call to method: /api/batteryNFTCollection/${batteryNFTCollectionAddress}`)
+
     // get addresses of the NFT in the collection
     const batteryNFTAddressList = await getAllMintsForCollection(umi, batteryNFTCollectionAddress)
 
@@ -53,6 +54,15 @@ app.get('/api/batteryNFTCollection/:batteryNFTCollectionAddress', async (req, re
     }
 
     res.json(batteryNFTList);
+})
+
+app.get('/api/getCollections/:updateAutorityAddress', async (req, res) => {
+    const updateAutorityAddress = req.params.updateAutorityAddress;
+    console.log(`call to method: /api/getCollections/${updateAutorityAddress}`)
+
+    const collectionList=getCollectionsForUpdateAuthority(umi,updateAutorityAddress)
+
+    res.json(collectionList);
 })
 
 app.listen(port, () => {
