@@ -31,7 +31,7 @@ npm run api
 ```
 
 ## Website
-<!-- ![index_img](https://github.com/pietromosca1994/batteryNFT/blob/main/docs/img/index_img.png)  
-![battery_img](https://github.com/pietromosca1994/batteryNFT/blob/main/docs/img/battery_img.png) -->
-![index_img](./docs/img/index_img.png)  
-![battery_img](./docs/img//battery_img.png)
+![index_img](https://github.com/pietromosca1994/batteryNFT/blob/main/docs/img/index_img.jpg)  
+![battery_img](https://github.com/pietromosca1994/batteryNFT/blob/main/docs/img/battery_img.jpg)
+<!-- ![index_img](./docs/img/index_img.png)  
+![battery_img](./docs/img//battery_img.png) -->
