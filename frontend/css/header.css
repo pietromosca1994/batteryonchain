@@ -60,13 +60,13 @@ body
 }
 #connect-button
 {
-    padding: 10px 15px;
+    padding: 10px 10px;
     color: white;
     background-color: rgb(3, 122, 122);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 10px;
 }
 .search
 {
