@@ -1,7 +1,7 @@
 # BatteryOnChain
 
 ## Introduction
-
+Tokenization of batteries for the Battery Pass mandated by the European Commission according to the EU Battery Regulation as published in the Official Journal of the European Union on 28 July 2023
 
 ## Installation 
 0. Install dependencies  
@@ -31,4 +31,7 @@ npm run api
 ```
 
 ## Website
-![alt text](image.png)
+<!-- ![index_img](https://github.com/pietromosca1994/batteryNFT/blob/main/docs/img/index_img.png)  
+![battery_img](https://github.com/pietromosca1994/batteryNFT/blob/main/docs/img/battery_img.png) -->
+![index_img](./docs/img/index_img.png)  
+![battery_img](./docs/img//battery_img.png)
