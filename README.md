@@ -16,7 +16,7 @@ npm run create_collection
 
 2. Run API  
 ``` bash
-cd ./frontend
+cd ./backend
 npm run api
 ```
 

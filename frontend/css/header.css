@@ -58,7 +58,7 @@ body
     text-decoration: none;
     color: rgb(29, 29, 29);
 }
-#connect-button
+/* #connect-button
 {
     padding: 10px 10px;
     color: white;
@@ -67,6 +67,41 @@ body
     border-radius: 5px;
     cursor: pointer;
     font-size: 10px;
+}
+#disconnect-button
+{
+    padding: 10px 10px;
+    color: white;
+    background-color: rgb(3, 122, 122);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+} */
+#connect-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+}
+#connect-button:hover {
+    background-color: #45a049;
+}
+#disconnect-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    display: none;
+}
+#disconnect-button:hover {
+    background-color: #e53935;
 }
 .search
 {
